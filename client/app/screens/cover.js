@@ -1,8 +1,19 @@
 iris.screen(
     function (self) {
+
+       // var userAjax = iris.resource(iris.path.resource.user);
+        //var sleep;
+
         self.create = function () {   
             console.log("cover Screen Created");
             self.tmpl(iris.path.screens.cover.html);
+
+            /* userAjax.me(function(data){
+                console.log(data);
+                if(data.Status === "200"){
+                    iris.navigate("#/micine");
+                }
+            });*/
 
             var ui_modal = self.ui("loginform_container", iris.path.uis.loginform.js);
             self.get("login").click(
@@ -20,12 +31,18 @@ iris.screen(
 
 
              };
-
-
-            
-
+       
         self.awake = function () {   
-            console.log("cover Screen Awakened");
+            
+            /* sleep = false;
+                console.log("cover Screen Awakened");
+                userAjax.me(function(data){
+                    if(data.Status === "200"){
+                        sleep = true;
+                        iris.navigate("#/carrusel");
+                    }
+                 });
+            };*/
 
             
            

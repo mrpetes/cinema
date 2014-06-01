@@ -1,0 +1,83 @@
+<div class="container">
+<div class="container" id="fondogestor">
+	<div class="row-fluid" >
+    <div id ="success" data-id="success" class="alert alert-success ">LA PELICULA HA SIDO CORRECTAMENTE INSERTADA</div>
+     <div id ="error"   data-id="error" class="alert alert-danger">HA HABIDO UN ERROR EN LA INSERCION ,POR FAVOR INTENTALO DE NUEVO</div>
+		<form class="form-horizontal thumbnail col-lg-6 col-md-6 col-xs-6 responsive">
+<fieldset>
+<legend><h2 class="fontForMovies">GESTOR DE PELICULAS</h2></legend>
+<div class="control-group">
+  <label class="control-label" for="movie_name">Titulo de la Pelicula</label>
+  <div class="controls">
+    <input data-id="movie_name" name="movie_name" type="text" placeholder="Titulo de la pelicula" class="input-xlarge"> 
+  </div>
+</div>
+<div class="control-group">
+  <label class="control-label" for="movie_name">Año de la Pelicula</label>
+  <div class="controls">
+    <input data-id="movie_year" name="movie_year" type="number" min="1900" max="2014" class="input-xlarge"> 
+  </div>
+</div>
+<div class="control-group">
+  <label class="control-label" for="Actors">Actores</label>
+  <div class="controls">
+    <input data-id="Actors" name="Actors" type="text" placeholder="introduce el actor o actores principales" class="input-xlarge" required="">
+    <p class="help-block">*cada actor debe ir seguido de una coma</p>
+  </div>
+</div>
+<div class="control-group">
+  <label class="control-label" for="Director">Director</label>
+  <div class="controls">
+    <input data-id="Director" name="Director" type="text" placeholder="introduce aqui el director o directores de la pelicula" class="input-xlarge" required="">
+    <p class="help-block">*cada director debe ir seguido de una coma</p>
+  </div>
+</div>
+<div class="control-group">
+  <label class="control-label" for="sinopsis">sinopsis</label>
+  <div class="controls">                     
+    <textarea data-id="sinopsis" name="sinopsis"></textarea>
+  </div>
+</div>
+<div class="control-group">
+  <label class="control-label" for="movie_categorie">Genero de la pelicula</label>
+  <div class="controls">
+    <select data-id="movie_categorie" name="movie_categorie" class="input-xlarge">
+      <option>TERROR</option>
+      <option>ROMANCE</option>
+      <option>ANIMACIÓN</option>
+      <option>HISTÓRICO</option>
+      <option>AVENTURA</option>
+      <option>COMEDIA</option>
+      <option>SAGAS</option>
+      <option>INFANTIL</option>
+      <option>ACCION</option>
+      <option>THRILLER</option>
+      <option>MUSICAL</option>
+      <option>DOCUMENTAL</option>
+    </select>
+  </div>
+</div>
+
+</fieldset>
+<div class="control-group">
+	<label class="control-label" for="uploader">Subir Portada</label>
+	<input data-id="upload" name="uploader" type="file" class="input-xlarge">
+	<p class="help-block">*la resolucion de las imagenes debe ser como maximo de 350x240px</p>
+</div>
+<div class="btn">
+  <button data-id="enviar" type="button" class="btn btn-primary">ENVIAR</button>
+</div>
+</form>
+	     </div>
+ <div data-id="collage" class="col-lg-6 col-md-6 col-xs-6">
+    <img src="img/categories/fondouploader.jpg" class="img-responsive " >
+    
+  </div>
+
+</div>
+<h2 class="col-lg-offset-4 col-md-offset-4 col-xs-offset-4 fontForMovies">ULTIMAS PELICULAS AÑADIDAS</h2>
+  <div class="container" data-id="UI_container">
+ 
+   </div>
+</div>  
+

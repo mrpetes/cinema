@@ -10,8 +10,11 @@ use thecinemaconspiracy;
 	movie_name VARCHAR(200) NOT NULL,
 	movie_year INT(10),
 	actors VARCHAR(200)NOT NULL,
+	director VARCHAR(200)NOT NULL,
+	sinopsis VARCHAR(2000)NOT NULL,
 	movie_category VARCHAR(100)NOT NULL,
-	imagen LONGBLOB,
+	imagen VARCHAR(100),
+	trailer VARCHAR(200),
 	score DECIMAL(3,2),
 	primary key(movie_id)
 
@@ -51,17 +54,28 @@ use thecinemaconspiracy;
 		
 	
 	);
-       //esta tabla aun  no la he podido insertar//
+      
 	create table user_movie_share(
 			user_mail VARCHAR(100),
-			movie_shared VARCHAR(200),
+			movie_shared INT,
 			share_link VARCHAR (100),
     		PRIMARY KEY (share_link),
-			FOREIGN KEY (movie_shared) REFERENCES movies(movie_name),
+			FOREIGN KEY (movie_shared) REFERENCES movies(movie_id),
 			FOREIGN KEY (user_mail)REFERENCES user_info(mail)
 			
 
 		);
+
+	create table pending_messages(
+		messagenumber INT NOT NULL AUTO_INCREMENT,
+		user_mail VARCHAR(100)NOT NULL,
+		user_movies int NOT NULL,
+		PRIMARY KEY(messagenumber),
+		FOREIGN KEY(user_mail) REFERENCES user_info(mail),
+		FOREIGN KEY(user_movies)REFERENCES movies(movie_id)
+
+
+	);
 
 	//CONSULTA PARA VER TODAS LAS PELICULAS QUE TIENE UN USUARIO EN CONCRETO//
 

@@ -7,14 +7,26 @@ iris.screen(
             self.create = function() {
                 self.tmpl(iris.path.screens.categories.html);
                 console.log("categories Screen Created");
-                load_categories();
-
-
-
+               var arrcategories = new Array("TERROR","ROMANCE","ANIMACION","HISTORICO","AVENTURAS","COMEDIA","SAGAS","INFANTIL","ACCION","THRILLER","MUSICAL","DOCUMENTAL");
+               var arrdesc = new Array(
+                "peliculas de terror que molan un monton","peliculas de romance que te van a hacer llorar como una magdalena",
+                "las mejores peliculas de animacion del momento","Forma parte de la historia como nunca antes","Vive todas las ultimas peliculas de aventuras",
+                "pasa un buen rato con las mejores comedias","Las mejores sagas del cine al alcance de tu mano","Peliculas para toda la familia, pero sobre todo para los peques",
+                "Accion sin limites, explosiones....te lo vas a perder?","Suspense y emocion hasta el ultimo minuto de metraje","Los mejores musicales de la historia",
+                "Los mejores Documentales de tematicas variadas"
+                );
                 
-            };
+                for(i=0;i<arrcategories.length;i++) {
+                    console.log("has pinchado el boton"); 
+                    var genero=arrcategories[i]; 
+                    var descripcion = arrdesc[i];   
+                    self.ui("ui_container", iris.path.uis.categorieUI.js, { "genero":genero,"ruta":genero, "descripcion":descripcion }, self.APPEND);
+                };
+            
+        };
+
             self.awake = function() {
-                load_categories();
+                
                 console.log("categories Screen Awakened");
             };
 
@@ -27,7 +39,7 @@ iris.screen(
             };
 
 
-            function load_categories(){
+           /* function load_categories(){
 
 
              
@@ -62,7 +74,7 @@ iris.screen(
 
             $('#addfav:checked').val();
         };
-         check_checked();
+         check_checked();*/
        
         },iris.path.screens.categories.js
         );
